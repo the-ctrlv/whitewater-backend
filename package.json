@@ -8,7 +8,8 @@
     "dev": "tsx watch server.ts",
     "lint": "eslint .",
     "build": "tsc",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "postinstall": "prisma generate"
   },
   "dependencies": {
     "@prisma/adapter-pg": "^7.8.0",

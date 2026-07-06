@@ -5,6 +5,7 @@ import helmet from "helmet";
 import { errorHandler } from "./middleware/errorHandler.middleware";
 
 const app = express();
+app.set("trust proxy", 1);
 app.use(helmet());
 app.use(express.json());
 
