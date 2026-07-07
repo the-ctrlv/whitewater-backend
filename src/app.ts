@@ -5,10 +5,11 @@ import helmet from "helmet";
 import { errorHandler } from "./middleware/errorHandler.middleware";
 import swaggerUi from "swagger-ui-express";
 import { swaggerSpec } from "./config/swagger";
-
+import cors from "cors";
 const app = express();
 app.set("trust proxy", 1);
 app.use(helmet());
+app.use(cors());
 app.use(express.json());
 
 app.get("/", (req, res) => {
